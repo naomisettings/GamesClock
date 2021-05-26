@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "889076636373",
+    "project_id": "games-clock",
+    "storage_bucket": "games-clock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889076636373:android:8645933df510b98f8f605c",
+        "android_client_info": {
+          "package_name": "cat.raimon.gamesclock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889076636373-gngue7okkvfepnbv2ibnattl4m9kpujd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.raimon.gamesclock",
+            "certificate_hash": "142f23ca66cb1b30a92ec4f70f8d7dd856dc847d"
+          }
+        },
+        {
+          "client_id": "889076636373-a9bnusi315uqk0aq1jimslnuphtqe1nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEsxMVVp3CErRdxiRe_-DF7PSVoIJHDoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889076636373-a9bnusi315uqk0aq1jimslnuphtqe1nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
