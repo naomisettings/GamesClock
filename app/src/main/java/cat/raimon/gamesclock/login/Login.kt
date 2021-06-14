@@ -25,6 +25,7 @@ class Login : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
+        //Call login function
         login()
 
         return binding.root
