@@ -46,6 +46,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 style="@style/titles" />
+
+            <Spinner
+                android:id="@+id/spnnPlayers"
+                android:layout_width="211dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>

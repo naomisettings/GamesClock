@@ -16,5 +16,9 @@
         android:id="@+id/rummyFragment"
         android:name="cat.raimon.gamesclock.rummikub.RummyFragment"
         android:label="RummyFragment"
-        tools:layout="@layout/fragment_rummy"/>
+        tools:layout="@layout/fragment_rummy">
+        <action
+            android:id="@+id/action_rummyFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
