@@ -13,6 +13,7 @@ import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 class RummyFragment : Fragment() {
 
     lateinit var binding: FragmentRummyBinding
+    lateinit var args: RummyFragmentArgs
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,6 +21,10 @@ class RummyFragment : Fragment() {
     ): View {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
+
+        args = RummyFragmentArgs.fromBundle(requireArguments())
+
+        val listPlyers = args.listPlayers.toList()
 
 
         return binding.root

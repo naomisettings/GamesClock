@@ -5,4 +5,13 @@
     <string name="logoscrabble">logoscrabble</string>
     <string name="logorummy">logorummy</string>
     <string name="players_spinner">Players</string>
+    <string name="raimon">Raimon</string>
+    <string name="santi">Santi</string>
+    <string name="cris_b">Cris B</string>
+    <string name="pare">Pare</string>
+    <string name="mare">Mare</string>
+    <string name="cris_s">Cris S</string>
+    <string name="invitat_1">Invitat 1</string>
+    <string name="invitat_2">Invitat 2</string>
+    <string name="invitat_3">Invitat 3</string>
 </resources>
