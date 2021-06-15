@@ -43,7 +43,7 @@ class RummyFragment : Fragment() {
             }
 
             override fun onFinish() {
-                val mediaPlayer = MediaPlayer.create(requireContext(), R.drawable.Flow)
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.flow)
                 mediaPlayer?.start()
             }
         }

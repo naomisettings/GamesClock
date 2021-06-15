@@ -18,4 +18,5 @@
     <string name="button_player_1">Button Player 1</string>
     <string name="button_player_2">Button Player 2</string>
     <string name="button_player_4">Button Player 4</string>
+    <string name="time">TIME:</string>
 </resources>
