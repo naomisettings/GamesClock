@@ -14,4 +14,8 @@
     <string name="invitat_1">Invitat 1</string>
     <string name="invitat_2">Invitat 2</string>
     <string name="invitat_3">Invitat 3</string>
+    <string name="button_player_3">Button Player 3</string>
+    <string name="button_player_1">Button Player 1</string>
+    <string name="button_player_2">Button Player 2</string>
+    <string name="button_player_4">Button Player 4</string>
 </resources>

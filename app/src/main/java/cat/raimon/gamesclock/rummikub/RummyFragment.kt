@@ -1,6 +1,8 @@
 package cat.raimon.gamesclock.rummikub
 
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentLoginBinding
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
+import kotlin.concurrent.timer
 
 class RummyFragment : Fragment() {
 
@@ -30,4 +33,20 @@ class RummyFragment : Fragment() {
         return binding.root
     }
 
+    fun timerFun() {
+        val timer = object: CountDownTimer(20000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                binding.apply {
+                    ttxTime1.text = millisUntilFinished.toString()
+                    txTime2.text = millisUntilFinished.toString()
+                }
+            }
+
+            override fun onFinish() {
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.drawable.Flow)
+                mediaPlayer?.start()
+            }
+        }
+        timer.start()
+    }
 }
