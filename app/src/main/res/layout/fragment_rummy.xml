@@ -16,8 +16,8 @@
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridLayout"
-                android:layout_width="285dp"
-                android:layout_height="317dp"
+                android:layout_width="286dp"
+                android:layout_height="332dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/button_player_1"
                     app:layout_column="0"
-                    app:layout_row="0"
+                    app:layout_row="1"
                     app:srcCompat="@drawable/comodingroc" />
 
                 <ImageButton
@@ -60,25 +60,28 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/button_player_2"
                     app:layout_column="1"
-                    app:layout_row="0"
+                    app:layout_row="1"
                     app:srcCompat="@drawable/comodinblau" />
 
                 <TextView
                     android:id="@+id/txtPlayer1"
+                    style="@style/textPlayers"
                     android:layout_width="142dp"
                     android:layout_height="wrap_content"
                     app:layout_column="0"
-                    app:layout_row="1" />
+                    app:layout_row="0" />
 
                 <TextView
                     android:id="@+id/txtPlayer2"
+                    style="@style/textPlayers"
                     android:layout_width="137dp"
                     android:layout_height="wrap_content"
                     app:layout_column="1"
-                    app:layout_row="1" />
+                    app:layout_row="0" />
 
                 <TextView
                     android:id="@+id/txtPlayer3"
+                    style="@style/textPlayers"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     app:layout_column="0"
@@ -86,6 +89,7 @@
 
                 <TextView
                     android:id="@+id/txtPlayer4"
+                    style="@style/textPlayers"
                     android:layout_width="137dp"
                     android:layout_height="wrap_content"
                     app:layout_column="1"

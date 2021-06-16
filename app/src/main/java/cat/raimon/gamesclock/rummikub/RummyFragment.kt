@@ -37,7 +37,7 @@ class RummyFragment : Fragment() {
 
         timerFun(args.time)
 
-        var listPlayers = args.players.toList().shuffled()
+        val listPlayers = args.players.toList().shuffled()
 
         displayPlayers(listPlayers)
 
@@ -89,10 +89,12 @@ class RummyFragment : Fragment() {
 
         binding.apply {
             txtPlayer1.text = listPlayers[0]
-            txtPlayer2.text = listPlayers[1]
+            txtPlayer3.text = listPlayers[1]
+            txtPlayer1.rotation = 180F
 
             if (listPlayers.size == 3) {
-                txtPlayer3.text = listPlayers[2]
+                txtPlayer2.text = listPlayers[2]
+                txtPlayer2.rotation = 180F
             }
             if (listPlayers.size == 4) {
                 txtPlayer4.text = listPlayers[3]

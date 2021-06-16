@@ -16,11 +16,13 @@ import com.google.firebase.auth.FirebaseAuth
 
 private const val AUTH_REQUEST_CODE = 2002
 
-val listPlayers: ArrayList<String> = arrayListOf()
 
 @Suppress("DEPRECATION")
 class Login : Fragment() {
+
     private lateinit var binding: FragmentLoginBinding
+
+    private var listPlayers: MutableList<String> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -77,29 +79,20 @@ class Login : Fragment() {
      */
     private fun openRummykub() {
         val countCheckBoxes = selectedCheckBoxes()
-        val time = binding.editTextNumber.text.toString().toLong()
+        if (binding.editTextNumber.text.isNotEmpty()) {
+            val time = binding.editTextNumber.text.toString().toLong()
 
-        /**
-         *
-         *
-         *
-         *
-         *
-         *
-         *
-         */
-
-        listPlayers.forEach{
-            Log.d("asdf",it)
-        }
-
-
-        if (countCheckBoxes in 2..4) {
-            findNavController().navigate(
-                LoginDirections.actionLoginToRummyFragment(time, listPlayers.toTypedArray())
-            )
-        } else {
-            listPlayers.clear()
+            if (countCheckBoxes in 2..4) {
+                findNavController().navigate(
+                    LoginDirections.actionLoginToRummyFragment(time, listPlayers.toTypedArray())
+                )
+            } else {
+                listPlayers.clear()
+            }
+        }else{
+            /**
+             * SNACKBAR
+             */
         }
     }
 
@@ -109,44 +102,42 @@ class Login : Fragment() {
     private fun selectedCheckBoxes(): Int {
         var countCheckBoxes = 0
 
-
         binding.apply {
             if (chbCrisB.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.cris_b.toString())
+                listPlayers.add(getString(R.string.cris_b))
             }
-            chbCrisB
             if (chbCrisS.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.cris_s.toString())
+                listPlayers.add(getString(R.string.cris_s))
             }
             if (chbMare.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.mare.toString())
+                listPlayers.add(getString(R.string.mare))
             }
             if (chbPare.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.pare.toString())
+                listPlayers.add(getString(R.string.pare))
             }
             if (chbRaimon.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.raimon.toString())
+                listPlayers.add(getString(R.string.raimon))
             }
             if (chbSanti.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.santi.toString())
+                listPlayers.add(getString(R.string.santi))
             }
             if (chbInvitat1.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.invitat_1.toString())
+                listPlayers.add(getString(R.string.invitat_1))
             }
             if (chbInvitat2.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.invitat_2.toString())
+                listPlayers.add(getString(R.string.invitat_2))
             }
             if (chbInvitat3.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(R.string.invitat_3.toString())
+                listPlayers.add(getString(R.string.invitat_3))
             }
         }
 
