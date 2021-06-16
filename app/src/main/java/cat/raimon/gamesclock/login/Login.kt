@@ -18,8 +18,9 @@ private const val AUTH_REQUEST_CODE = 2002
 
 val listPlayers: ArrayList<String> = arrayListOf()
 
+@Suppress("DEPRECATION")
 class Login : Fragment() {
-    lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,10 +77,27 @@ class Login : Fragment() {
      */
     private fun openRummykub() {
         val countCheckBoxes = selectedCheckBoxes()
+        val time = binding.editTextNumber.text.toString().toLong()
+
+        /**
+         *
+         *
+         *
+         *
+         *
+         *
+         *
+         */
+
+        listPlayers.forEach{
+            Log.d("asdf",it)
+        }
+
 
         if (countCheckBoxes in 2..4) {
             findNavController().navigate(
-                LoginDirections.actionLoginToRummyFragment(listPlayers.toTypedArray()))
+                LoginDirections.actionLoginToRummyFragment(time, listPlayers.toTypedArray())
+            )
         } else {
             listPlayers.clear()
         }

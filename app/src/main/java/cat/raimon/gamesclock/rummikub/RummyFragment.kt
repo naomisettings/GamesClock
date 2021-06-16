@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import java.util.concurrent.TimeUnit
+import kotlin.collections.MutableList as MutableList
 
 
 class RummyFragment : Fragment() {
@@ -21,6 +22,8 @@ class RummyFragment : Fragment() {
 
     private lateinit var mediaPlayer: MediaPlayer
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,28 +31,50 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
-        args = RummyFragmentArgs.fromBundle(requireArguments())
-
-        val listPlyers = args.listPlayers.toList()
-
         mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.dead)
 
-        timerFun()
+        args = RummyFragmentArgs.fromBundle(requireArguments())
+
+        timerFun(args.time)
+
+        var listPlayers = args.players.toList().shuffled()
+
+        displayPlayers(listPlayers)
 
         return binding.root
     }
 
-    fun timerFun() {
-        val timer = object: CountDownTimer(70000, 1000) {
+    private fun timerFun(time: Long) {
+
+        val timer = object : CountDownTimer(time * 1000, 1000) {
             var minutes = 0
             var seconds = 0
+
             override fun onTick(millisUntilFinished: Long) {
                 minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished).toInt()
-                seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished).toInt() - minutes * 60
+                seconds =
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished).toInt() - minutes * 60
+
+                var timeClock = ""
+
+                timeClock = if (minutes < 10) {
+                    if (seconds < 10) {
+                        "0$minutes : 0$seconds"
+                    } else {
+                        "0$minutes : $seconds"
+                    }
+                } else {
+                    if (seconds < 10) {
+                        "$minutes : 0$seconds"
+                    } else {
+                        "$minutes : $seconds"
+                    }
+                }
+
 
                 binding.apply {
-                    ttxTime1.text = "$minutes : $seconds"
-                    txTime2.text = "$minutes : $seconds"
+                    ttxTime1.text = timeClock
+                    txTime2.text = timeClock
                 }
             }
 
@@ -58,5 +83,20 @@ class RummyFragment : Fragment() {
             }
         }
         timer.start()
+    }
+
+    private fun displayPlayers(listPlayers: List<String>) {
+
+        binding.apply {
+            txtPlayer1.text = listPlayers[0]
+            txtPlayer2.text = listPlayers[1]
+
+            if (listPlayers.size == 3) {
+                txtPlayer3.text = listPlayers[2]
+            }
+            if (listPlayers.size == 4) {
+                txtPlayer4.text = listPlayers[3]
+            }
+        }
     }
 }

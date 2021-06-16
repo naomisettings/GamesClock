@@ -12,7 +12,10 @@
             android:id="@+id/action_login_to_rummyFragment"
             app:destination="@id/rummyFragment" />
         <argument
-            android:name="listPlayers"
+            android:name="time"
+            app:argType="long" />
+        <argument
+            android:name="players"
             app:argType="string[]" />
     </fragment>
     <fragment
@@ -24,7 +27,10 @@
             android:id="@+id/action_rummyFragment_to_login"
             app:destination="@id/login" />
         <argument
-            android:name="listPlayers"
+            android:name="time"
+            app:argType="long" />
+        <argument
+            android:name="players"
             app:argType="string[]" />
     </fragment>
 </navigation>
