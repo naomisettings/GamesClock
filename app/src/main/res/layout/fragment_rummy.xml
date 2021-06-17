@@ -66,7 +66,7 @@
                 <TextView
                     android:id="@+id/txtPlayer1"
                     style="@style/textPlayers"
-                    android:layout_width="142dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     app:layout_column="0"
                     app:layout_row="0" />
@@ -74,7 +74,7 @@
                 <TextView
                     android:id="@+id/txtPlayer2"
                     style="@style/textPlayers"
-                    android:layout_width="137dp"
+                    android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     app:layout_column="1"
                     app:layout_row="0" />
@@ -82,18 +82,21 @@
                 <TextView
                     android:id="@+id/txtPlayer3"
                     style="@style/textPlayers"
-                    android:layout_width="140dp"
+                    android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
                     app:layout_column="0"
                     app:layout_row="3" />
 
                 <TextView
                     android:id="@+id/txtPlayer4"
                     style="@style/textPlayers"
-                    android:layout_width="137dp"
+                    android:layout_width="93dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
                     app:layout_column="1"
                     app:layout_row="3" />
+
             </androidx.gridlayout.widget.GridLayout>
 
             <TextView

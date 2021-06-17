@@ -19,4 +19,7 @@
     <string name="button_player_2">Button Player 2</string>
     <string name="button_player_4">Button Player 4</string>
     <string name="time">TIME:</string>
+    <string name="checkboxe_snackbar">Select between 2 and 4 checkboxes</string>
+    <string name="select_time">Please, introduce the time</string>
+    <string name="minim_time">The minim time is 60 seconds</string>
 </resources>

@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentLoginBinding
 import com.firebase.ui.auth.AuthUI
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
 private const val AUTH_REQUEST_CODE = 2002
@@ -79,20 +80,44 @@ class Login : Fragment() {
      */
     private fun openRummykub() {
         val countCheckBoxes = selectedCheckBoxes()
-        if (binding.editTextNumber.text.isNotEmpty()) {
-            val time = binding.editTextNumber.text.toString().toLong()
+        val edTextNumber = binding.editTextNumber.text
 
-            if (countCheckBoxes in 2..4) {
-                findNavController().navigate(
-                    LoginDirections.actionLoginToRummyFragment(time, listPlayers.toTypedArray())
-                )
+        if (edTextNumber.isNotEmpty()) {
+            if (edTextNumber.toString().toInt() >= 60) {
+                val time = edTextNumber.toString().toLong()
+
+                if (countCheckBoxes in 2..4) {
+                    findNavController().navigate(
+                        LoginDirections.actionLoginToRummyFragment(time, listPlayers.toTypedArray())
+                    )
+                } else {
+                    listPlayers.clear()
+                    view?.let {
+                        Snackbar.make(
+                            it,
+                            R.string.checkboxe_snackbar,
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                    }
+                }
             } else {
-                listPlayers.clear()
+                view?.let {
+                    Snackbar.make(
+                        it,
+                        R.string.minim_time,
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
             }
-        }else{
-            /**
-             * SNACKBAR
-             */
+        } else {
+            view?.let {
+                Snackbar.make(
+                    it,
+                    R.string.select_time,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+
         }
     }
 

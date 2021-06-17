@@ -20,8 +20,8 @@ class RummyFragment : Fragment() {
     lateinit var binding: FragmentRummyBinding
     lateinit var args: RummyFragmentArgs
 
+    private lateinit var mediaPlayerBip: MediaPlayer
     private lateinit var mediaPlayer: MediaPlayer
-
 
 
     override fun onCreateView(
@@ -31,6 +31,7 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
+        mediaPlayerBip = MediaPlayer.create(requireActivity(), R.raw.alarm)
         mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.dead)
 
         args = RummyFragmentArgs.fromBundle(requireArguments())
@@ -71,6 +72,10 @@ class RummyFragment : Fragment() {
                     }
                 }
 
+                if (millisUntilFinished in 25001..29999){
+                    mediaPlayerBip.start()
+                }
+
 
                 binding.apply {
                     ttxTime1.text = timeClock
@@ -93,10 +98,14 @@ class RummyFragment : Fragment() {
             txtPlayer1.rotation = 180F
 
             if (listPlayers.size == 3) {
+                Log.i("info12",listPlayers.size.toString())
                 txtPlayer2.text = listPlayers[2]
                 txtPlayer2.rotation = 180F
             }
             if (listPlayers.size == 4) {
+                Log.i("info13",listPlayers.size.toString())
+                txtPlayer2.text = listPlayers[2]
+                txtPlayer2.rotation = 180F
                 txtPlayer4.text = listPlayers[3]
             }
         }
