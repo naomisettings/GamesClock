@@ -1,5 +1,6 @@
 package cat.raimon.gamesclock.rummikub
 
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -12,13 +13,11 @@ import androidx.fragment.app.Fragment
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import java.util.concurrent.TimeUnit
-import kotlin.collections.MutableList as MutableList
-
 
 class RummyFragment : Fragment() {
 
-    lateinit var binding: FragmentRummyBinding
-    lateinit var args: RummyFragmentArgs
+    private lateinit var binding: FragmentRummyBinding
+    private lateinit var args: RummyFragmentArgs
 
     private lateinit var mediaPlayerBip: MediaPlayer
     private lateinit var mediaPlayer: MediaPlayer
@@ -31,8 +30,8 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
-        mediaPlayerBip = MediaPlayer.create(requireActivity(), R.raw.alarm)
-        mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.dead)
+        mediaPlayerBip = MediaPlayer.create(requireActivity(), R.raw.notification)
+        mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.end_tourn)
 
         args = RummyFragmentArgs.fromBundle(requireArguments())
 
@@ -41,8 +40,36 @@ class RummyFragment : Fragment() {
         val listPlayers = args.players.toList().shuffled()
 
         displayPlayers(listPlayers)
+        playerTurn(listPlayers)
 
         return binding.root
+    }
+
+    private fun playerTurn(listPlayers: List<String>) {
+
+        if (listPlayers.size == 2){
+            binding.apply {
+                bttnPlayer2.isEnabled = false
+                bttnPlayer4.isEnabled = false
+                bttnPlayer2.setColorFilter(Color.rgb(211, 209, 209))
+                bttnPlayer4.setColorFilter(Color.rgb(211, 209, 209))
+            }
+            for ((i, x) in listPlayers.withIndex()) {
+                //listPlayers[i]
+                /**
+                 * implement
+                 */
+            }
+        }else if (listPlayers.size == 3){
+            binding.apply {
+                bttnPlayer4.isEnabled = false
+                bttnPlayer4.setColorFilter(Color.rgb(211, 209, 209))
+            }
+        }else{
+
+        }
+
+
     }
 
     private fun timerFun(time: Long) {
@@ -56,9 +83,7 @@ class RummyFragment : Fragment() {
                 seconds =
                     TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished).toInt() - minutes * 60
 
-                var timeClock = ""
-
-                timeClock = if (minutes < 10) {
+                val timeClock: String = if (minutes < 10) {
                     if (seconds < 10) {
                         "0$minutes : 0$seconds"
                     } else {
@@ -72,13 +97,14 @@ class RummyFragment : Fragment() {
                     }
                 }
 
-                if (millisUntilFinished in 25001..29999){
+                if (millisUntilFinished in 37001..39999) {
                     mediaPlayerBip.start()
                 }
 
 
                 binding.apply {
                     ttxTime1.text = timeClock
+                    ttxTime1.rotation = 180F
                     txTime2.text = timeClock
                 }
             }
@@ -98,12 +124,10 @@ class RummyFragment : Fragment() {
             txtPlayer1.rotation = 180F
 
             if (listPlayers.size == 3) {
-                Log.i("info12",listPlayers.size.toString())
                 txtPlayer2.text = listPlayers[2]
                 txtPlayer2.rotation = 180F
             }
             if (listPlayers.size == 4) {
-                Log.i("info13",listPlayers.size.toString())
                 txtPlayer2.text = listPlayers[2]
                 txtPlayer2.rotation = 180F
                 txtPlayer4.text = listPlayers[3]
