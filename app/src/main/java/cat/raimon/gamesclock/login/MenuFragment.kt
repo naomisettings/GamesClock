@@ -1,15 +1,17 @@
 package cat.raimon.gamesclock.login
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentMenuBinding
-import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import com.google.android.material.snackbar.Snackbar
 
 class MenuFragment : Fragment() {
@@ -48,6 +50,7 @@ class MenuFragment : Fragment() {
                     findNavController().navigate(
                         MenuFragmentDirections.actionMenuFragmentToRummyFragment(time, listPlayers.toTypedArray())
                     )
+                    hideKeyboard()
                 } else {
                     listPlayers.clear()
                     view?.let {
@@ -127,4 +130,17 @@ class MenuFragment : Fragment() {
         return countCheckBoxes
     }
 
+    /**
+     * Hide keyboard
+     */
+
+    private fun Context.hideKeyboard(view: View) {
+        val inputMethodManager =
+            getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
+    private fun Fragment.hideKeyboard() {
+        view?.let { activity?.hideKeyboard(it) }
+    }
 }

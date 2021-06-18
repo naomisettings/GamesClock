@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,15 +42,15 @@ class RummyFragment : Fragment() {
 
         timerFun()
 
-        binding.bttnEndGame.setOnClickListener {
-
-        }
-
         binding.bttnBack.setOnClickListener {
             findNavController().navigate(R.id.action_rummyFragment_to_menuFragment)
             mediaPlayer.stop()
+            mediaPlayerBip.stop()
         }
+        binding.bttnEndGame.setOnClickListener {
 
+        }
+        
         return binding.root
     }
 
@@ -171,6 +172,7 @@ class RummyFragment : Fragment() {
         }
 
     }
+
     private fun playerTurnFour(timer: CountDownTimer) {
 
         binding.bttnPlayer1.setOnClickListener {
@@ -247,6 +249,7 @@ class RummyFragment : Fragment() {
             timer.start()
         }
     }
+
     private fun timerFun() {
         val timer = object : CountDownTimer(args.time * 1000, 1000) {
             var minutes = 0
@@ -313,4 +316,17 @@ class RummyFragment : Fragment() {
         }
     }
 
+    /**
+     * Disable Back Button
+     */
+    override fun onResume() {
+        super.onResume()
+        this.requireView().isFocusableInTouchMode = true
+        this.requireView().requestFocus()
+        this.requireView().setOnKeyListener { _, keyCode, _ ->
+            keyCode == KeyEvent.KEYCODE_BACK
+        }
+    }
+
 }
+

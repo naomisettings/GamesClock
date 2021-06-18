@@ -16,7 +16,8 @@
             app:argType="string[]" />
         <action
             android:id="@+id/action_login_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/rummyFragment"
@@ -31,7 +32,8 @@
             app:argType="string[]" />
         <action
             android:id="@+id/action_rummyFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -40,6 +42,7 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_rummyFragment"
-            app:destination="@id/rummyFragment" />
+            app:destination="@id/rummyFragment"
+            app:popUpTo="@id/rummyFragment" />
     </fragment>
 </navigation>
