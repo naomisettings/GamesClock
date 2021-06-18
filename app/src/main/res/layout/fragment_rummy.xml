@@ -16,8 +16,8 @@
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridLayout"
-                android:layout_width="293dp"
-                android:layout_height="340dp"
+                android:layout_width="292dp"
+                android:layout_height="341dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
@@ -68,7 +68,7 @@
                     android:id="@+id/txtPlayer1"
                     style="@style/textPlayers"
                     android:layout_width="133dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_marginStart="5dp"
                     app:layout_column="0"
                     app:layout_row="0" />
@@ -76,8 +76,8 @@
                 <TextView
                     android:id="@+id/txtPlayer2"
                     style="@style/textPlayers"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="134dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="5dp"
                     app:layout_column="1"
                     app:layout_row="0" />
@@ -85,8 +85,8 @@
                 <TextView
                     android:id="@+id/txtPlayer3"
                     style="@style/textPlayers"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="137dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="5dp"
                     app:layout_column="0"
                     app:layout_row="3" />
@@ -94,8 +94,8 @@
                 <TextView
                     android:id="@+id/txtPlayer4"
                     style="@style/textPlayers"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="134dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="5dp"
                     app:layout_column="1"
                     app:layout_row="3" />
@@ -136,9 +136,9 @@
                 android:layout_height="40dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/end_game"
-                android:background="@drawable/button_shape"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -148,11 +148,23 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/come_back"
-                android:background="@drawable/button_shape"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/bttnRetry"
+                android:layout_width="54dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:contentDescription="@string/retry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/retry" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

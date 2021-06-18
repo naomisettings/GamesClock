@@ -43,7 +43,7 @@ class RummyFragment : Fragment() {
         displayPlayers(listPlayers)
         disconectUnusedButtons(listPlayers)
 
-        timerFun()
+        timerFun(listPlayers)
 
         binding.bttnBack.setOnClickListener {
             findNavController().navigate(R.id.action_rummyFragment_to_menuFragment)
@@ -53,7 +53,9 @@ class RummyFragment : Fragment() {
         binding.bttnEndGame.setOnClickListener {
 
         }
-        
+
+
+
         return binding.root
     }
 
@@ -253,38 +255,18 @@ class RummyFragment : Fragment() {
         }
     }
 
-    private fun timerFun() {
+    private fun timerFun(listPlayers: List<String>) {
         val timer = object : CountDownTimer(args.time * 1000, 1000) {
-            var minutes = 0
-            var seconds = 0
+
 
             override fun onTick(millisUntilFinished: Long) {
-                minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished).toInt()
-                seconds =
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished).toInt() - minutes * 60
 
-                val timeClock: String = if (minutes < 10) {
-                    if (seconds < 10) {
-                        "0$minutes : 0$seconds"
-                    } else {
-                        "0$minutes : $seconds"
-                    }
-                } else {
-                    if (seconds < 10) {
-                        "$minutes : 0$seconds"
-                    } else {
-                        "$minutes : $seconds"
-                    }
-                }
+                viewClock(millisUntilFinished)
+
                 if (millisUntilFinished in 37001..39999) {
                     mediaPlayerBip.start()
                 }
 
-                binding.apply {
-                    ttxTime1.text = timeClock
-                    txTime2.text = timeClock
-                    txTime2.rotation = 180F
-                }
 
             }
 
@@ -298,6 +280,56 @@ class RummyFragment : Fragment() {
             4 -> playerTurnFour(timer)
         }
 
+        binding.bttnRetry.setOnClickListener {
+            mediaPlayer.stop()
+            mediaPlayerBip.stop()
+
+            timer.cancel()
+
+            displayPlayers(listPlayers)
+            disconectUnusedButtons(listPlayers)
+
+            viewClock(args.time * 1000)
+
+            binding.apply {
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer4.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer2.setBackgroundResource(R.drawable.players_shape)
+
+                bttnPlayer1.isEnabled = true
+                bttnPlayer3.isEnabled = true
+                bttnPlayer4.isEnabled = true
+                bttnPlayer2.isEnabled = true
+            }
+        }
+
+    }
+
+    private fun viewClock(millisUntilFinished: Long) {
+
+        val minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished).toInt()
+        val seconds =
+            TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished).toInt() - minutes * 60
+
+        val timeClock: String = if (minutes < 10) {
+            if (seconds < 10) {
+                "0$minutes : 0$seconds"
+            } else {
+                "0$minutes : $seconds"
+            }
+        } else {
+            if (seconds < 10) {
+                "$minutes : 0$seconds"
+            } else {
+                "$minutes : $seconds"
+            }
+        }
+        binding.apply {
+            ttxTime1.text = timeClock
+            txTime2.text = timeClock
+            txTime2.rotation = 180F
+        }
     }
 
     private fun displayPlayers(listPlayers: List<String>) {
