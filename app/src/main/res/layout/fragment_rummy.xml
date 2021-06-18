@@ -118,12 +118,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
             <Button
-                android:id="@+id/bttnStart"
+                android:id="@+id/bttnEndGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/start"
+                android:backgroundTint="#F55C47"
+                android:text="@string/end_game"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

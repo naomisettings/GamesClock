@@ -23,4 +23,5 @@
     <string name="select_time">Please, introduce the time</string>
     <string name="minim_time">The minim time is 60 seconds</string>
     <string name="start">start</string>
+    <string name="end_game">end game</string>
 </resources>
