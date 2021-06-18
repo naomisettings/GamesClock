@@ -121,15 +121,15 @@ class MenuFragment : Fragment() {
             }
             if (chbPere.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(getString(R.string.invitat_1))
+                listPlayers.add(getString(R.string.pere))
             }
             if (chbInvitat1.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(getString(R.string.invitat_2))
+                listPlayers.add(getString(R.string.invitat_1))
             }
             if (chbInvitat2.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(getString(R.string.invitat_3))
+                listPlayers.add(getString(R.string.invitat_2))
             }
         }
 

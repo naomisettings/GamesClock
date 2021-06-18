@@ -66,14 +66,14 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/raimon"
+                    android:text="@string/raimon_ch"
                     app:layout_column="0"
                     app:layout_row="1" />
 
                 <CheckBox
                     android:id="@+id/chbSanti"
                     style="@style/chkboxes"
-                    android:text="@string/santi"
+                    android:text="@string/santi_ch"
                     app:layout_column="0"
                     app:layout_row="0" />
 
@@ -82,7 +82,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cris_b"
+                    android:text="@string/cris_b_ch"
                     app:layout_column="1"
                     app:layout_row="0" />
 
@@ -91,7 +91,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/pare"
+                    android:text="@string/pare_ch"
                     app:layout_column="1"
                     app:layout_row="1" />
 
@@ -100,7 +100,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mare"
+                    android:text="@string/mare_ch"
                     app:layout_column="2"
                     app:layout_row="0" />
 
@@ -109,7 +109,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cris_s"
+                    android:text="@string/cris_s_ch"
                     app:layout_column="2"
                     app:layout_row="1" />
 
@@ -118,7 +118,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/invitat_1"
+                    android:text="@string/pere_ch"
                     app:layout_column="0"
                     app:layout_row="2" />
 
@@ -127,7 +127,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/invitat_2"
+                    android:text="@string/invitat_1_ch"
                     app:layout_column="1"
                     app:layout_row="2" />
 
@@ -136,7 +136,7 @@
                     style="@style/chkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/invitat_3"
+                    android:text="@string/invitat_2_ch"
                     app:layout_column="2"
                     app:layout_row="2" />
 
