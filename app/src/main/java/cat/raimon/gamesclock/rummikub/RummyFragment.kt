@@ -12,8 +12,6 @@ import androidx.fragment.app.Fragment
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import java.util.concurrent.TimeUnit
-import java.util.concurrent.locks.ReentrantLock
-
 
 class RummyFragment : Fragment() {
 
@@ -23,8 +21,6 @@ class RummyFragment : Fragment() {
     private lateinit var mediaPlayerBip: MediaPlayer
     private lateinit var mediaPlayer: MediaPlayer
 
-    private val lock = ReentrantLock()
-    private val condition = lock.newCondition()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -62,14 +58,14 @@ class RummyFragment : Fragment() {
             }
         } else if (listPlayers.size == 3) {
             binding.apply {
-                bttnPlayer4.isEnabled = false
-                bttnPlayer4.setColorFilter(Color.rgb(211, 209, 209))
+                bttnPlayer2.isEnabled = false
+                bttnPlayer2.setColorFilter(Color.rgb(211, 209, 209))
             }
         }
 
     }
 
-    private fun playerTurn(timer: CountDownTimer) {
+    private fun playerTurnTwo(timer: CountDownTimer) {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
@@ -83,6 +79,51 @@ class RummyFragment : Fragment() {
                 bttnPlayer4.isEnabled = false
             }
             timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
+            timer.start()
+        }
+        binding.bttnPlayer3.setOnClickListener {
+            binding.apply {
+                txtPlayer3.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
+
+                bttnPlayer1.isEnabled = true
+
+                bttnPlayer4.isEnabled = false
+                bttnPlayer2.isEnabled = false
+                bttnPlayer3.isEnabled = false
+            }
+            timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
+            timer.start()
+        }
+
+    }
+
+    private fun playerTurnThree(timer: CountDownTimer) {
+
+        binding.bttnPlayer1.setOnClickListener {
+            binding.apply {
+                txtPlayer1.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
+
+                bttnPlayer3.isEnabled = true
+
+                bttnPlayer1.isEnabled = false
+                bttnPlayer2.isEnabled = false
+                bttnPlayer4.isEnabled = false
+            }
+            timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
             timer.start()
         }
         binding.bttnPlayer3.setOnClickListener {
@@ -97,8 +138,72 @@ class RummyFragment : Fragment() {
                 bttnPlayer3.isEnabled = false
             }
             timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
             timer.start()
         }
+
+        binding.bttnPlayer4.setOnClickListener {
+            binding.apply {
+                txtPlayer4.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
+
+                bttnPlayer1.isEnabled = true
+
+                bttnPlayer3.isEnabled = false
+                bttnPlayer2.isEnabled = false
+                bttnPlayer4.isEnabled = false
+            }
+            timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
+            timer.start()
+        }
+
+    }
+    private fun playerTurnFour(timer: CountDownTimer) {
+
+        binding.bttnPlayer1.setOnClickListener {
+            binding.apply {
+                txtPlayer1.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
+
+                bttnPlayer3.isEnabled = true
+
+                bttnPlayer1.isEnabled = false
+                bttnPlayer2.isEnabled = false
+                bttnPlayer4.isEnabled = false
+            }
+            timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
+            timer.start()
+        }
+        binding.bttnPlayer3.setOnClickListener {
+            binding.apply {
+                txtPlayer3.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer4.setBackgroundColor(Color.rgb(245, 92, 71))
+
+                bttnPlayer4.isEnabled = true
+
+                bttnPlayer1.isEnabled = false
+                bttnPlayer2.isEnabled = false
+                bttnPlayer3.isEnabled = false
+            }
+            timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
+            timer.start()
+        }
+
         binding.bttnPlayer4.setOnClickListener {
             binding.apply {
                 txtPlayer4.setBackgroundColor(Color.rgb(0, 74, 124))
@@ -111,6 +216,10 @@ class RummyFragment : Fragment() {
                 bttnPlayer4.isEnabled = false
             }
             timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
             timer.start()
         }
         binding.bttnPlayer2.setOnClickListener {
@@ -125,16 +234,17 @@ class RummyFragment : Fragment() {
                 bttnPlayer4.isEnabled = false
             }
             timer.cancel()
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.prepare()
+            }
             timer.start()
         }
     }
-
     private fun timerFun() {
-
-        val timer = object : CountDownTimer(args.time * 1000, 1000) {
+        val timer = object : CountDownTimer(2 * 1000, 1000) {
             var minutes = 0
             var seconds = 0
-
 
             override fun onTick(millisUntilFinished: Long) {
                 minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished).toInt()
@@ -154,29 +264,28 @@ class RummyFragment : Fragment() {
                         "$minutes : $seconds"
                     }
                 }
-
                 if (millisUntilFinished in 37001..39999) {
                     mediaPlayerBip.start()
                 }
 
-
                 binding.apply {
                     ttxTime1.text = timeClock
-                    ttxTime1.rotation = 180F
                     txTime2.text = timeClock
+                    txTime2.rotation = 180F
                 }
-                if (millisUntilFinished == 1L) {
-                    mediaPlayer.start()
-                }
-
 
             }
 
             override fun onFinish() {
-
+                mediaPlayer.start()
             }
         }
-        playerTurn(timer)
+        when (args.players.size) {
+            2 -> playerTurnTwo(timer)
+            3 -> playerTurnThree(timer)
+            4 -> playerTurnFour(timer)
+        }
+
     }
 
     private fun displayPlayers(listPlayers: List<String>) {
@@ -187,8 +296,8 @@ class RummyFragment : Fragment() {
             txtPlayer1.rotation = 180F
 
             if (listPlayers.size == 3) {
-                txtPlayer2.text = listPlayers[2]
-                txtPlayer2.rotation = 180F
+                txtPlayer4.text = listPlayers[2]
+                txtPlayer4.rotation = 180F
             }
             if (listPlayers.size == 4) {
                 txtPlayer2.text = listPlayers[2]
