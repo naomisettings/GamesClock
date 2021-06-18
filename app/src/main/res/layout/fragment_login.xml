@@ -149,6 +149,7 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/txtIntroduceTime"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
+                android:textColor="#E8F1F5"
                 app:layout_constraintStart_toEndOf="@+id/txtIntroduceTime"
                 android:autofillHints=""
                 tools:ignore="LabelFor" />
@@ -159,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="@string/time"
-                android:textColor="#000000"
+                android:textColor="#E8F1F5"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
                 app:layout_constraintHorizontal_bias="0.5"

@@ -22,4 +22,5 @@
     <string name="checkboxe_snackbar">Select between 2 and 4 checkboxes</string>
     <string name="select_time">Please, introduce the time</string>
     <string name="minim_time">The minim time is 60 seconds</string>
+    <string name="start">start</string>
 </resources>
