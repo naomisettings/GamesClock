@@ -24,4 +24,8 @@
     <string name="minim_time">The minim time is 60 seconds</string>
     <string name="start">start</string>
     <string name="end_game">end game</string>
+    <string name="select_game">SELECT GAME</string>
+    <string name="rummy_stadistics">RUMMY STADISTICS</string>
+    <string name="scrabble_stadistis">SCRABBLE STADISTIS</string>
+    <string name="come_back">COME BACK</string>
 </resources>

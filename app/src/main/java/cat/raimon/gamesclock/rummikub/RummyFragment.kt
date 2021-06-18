@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import java.util.concurrent.TimeUnit
@@ -42,6 +43,11 @@ class RummyFragment : Fragment() {
 
         binding.bttnEndGame.setOnClickListener {
 
+        }
+
+        binding.bttnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_rummyFragment_to_menuFragment)
+            mediaPlayer.stop()
         }
 
         return binding.root
@@ -242,7 +248,7 @@ class RummyFragment : Fragment() {
         }
     }
     private fun timerFun() {
-        val timer = object : CountDownTimer(2 * 1000, 1000) {
+        val timer = object : CountDownTimer(args.time * 1000, 1000) {
             var minutes = 0
             var seconds = 0
 
@@ -306,4 +312,5 @@ class RummyFragment : Fragment() {
             }
         }
     }
+
 }

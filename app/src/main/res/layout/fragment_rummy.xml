@@ -66,7 +66,7 @@
                 <TextView
                     android:id="@+id/txtPlayer1"
                     style="@style/textPlayers"
-                    android:layout_width="100dp"
+                    android:layout_width="144dp"
                     android:layout_height="wrap_content"
                     app:layout_column="0"
                     app:layout_row="0" />
@@ -74,7 +74,7 @@
                 <TextView
                     android:id="@+id/txtPlayer2"
                     style="@style/textPlayers"
-                    android:layout_width="99dp"
+                    android:layout_width="145dp"
                     android:layout_height="wrap_content"
                     app:layout_column="1"
                     app:layout_row="0" />
@@ -82,18 +82,16 @@
                 <TextView
                     android:id="@+id/txtPlayer3"
                     style="@style/textPlayers"
-                    android:layout_width="88dp"
+                    android:layout_width="143dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="45dp"
                     app:layout_column="0"
                     app:layout_row="3" />
 
                 <TextView
                     android:id="@+id/txtPlayer4"
                     style="@style/textPlayers"
-                    android:layout_width="93dp"
+                    android:layout_width="141dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="45dp"
                     app:layout_column="1"
                     app:layout_row="3" />
 
@@ -121,10 +119,21 @@
                 android:id="@+id/bttnEndGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#F55C47"
                 android:text="@string/end_game"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/bttnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#F55C47"
+                android:text="@string/come_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
