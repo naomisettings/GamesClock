@@ -30,6 +30,8 @@ class MenuFragment : Fragment() {
             openRummykub()
         }
 
+        hideKeyboardCheckBoxes()
+
         return binding.root
     }
 
@@ -62,6 +64,8 @@ class MenuFragment : Fragment() {
                     }
                 }
             } else {
+                listPlayers.clear()
+
                 view?.let {
                     Snackbar.make(
                         it,
@@ -71,6 +75,8 @@ class MenuFragment : Fragment() {
                 }
             }
         } else {
+            listPlayers.clear()
+
             view?.let {
                 Snackbar.make(
                     it,
@@ -113,15 +119,15 @@ class MenuFragment : Fragment() {
                 countCheckBoxes++
                 listPlayers.add(getString(R.string.santi))
             }
-            if (chbInvitat1.isChecked) {
+            if (chbPere.isChecked) {
                 countCheckBoxes++
                 listPlayers.add(getString(R.string.invitat_1))
             }
-            if (chbInvitat2.isChecked) {
+            if (chbInvitat1.isChecked) {
                 countCheckBoxes++
                 listPlayers.add(getString(R.string.invitat_2))
             }
-            if (chbInvitat3.isChecked) {
+            if (chbInvitat2.isChecked) {
                 countCheckBoxes++
                 listPlayers.add(getString(R.string.invitat_3))
             }
@@ -131,9 +137,8 @@ class MenuFragment : Fragment() {
     }
 
     /**
-     * Hide keyboard
+     * Hide KKeyboard
      */
-
     private fun Context.hideKeyboard(view: View) {
         val inputMethodManager =
             getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -142,5 +147,20 @@ class MenuFragment : Fragment() {
 
     private fun Fragment.hideKeyboard() {
         view?.let { activity?.hideKeyboard(it) }
+    }
+
+    /**
+     * Hide Keyboard on click checkboxes
+     */
+    private fun hideKeyboardCheckBoxes(){
+        binding.chbCrisB.setOnClickListener {hideKeyboard()}
+        binding.chbCrisS.setOnClickListener {hideKeyboard()}
+        binding.chbPere.setOnClickListener {hideKeyboard()}
+        binding.chbInvitat1.setOnClickListener {hideKeyboard()}
+        binding.chbInvitat2.setOnClickListener {hideKeyboard()}
+        binding.chbMare.setOnClickListener {hideKeyboard()}
+        binding.chbPare.setOnClickListener {hideKeyboard()}
+        binding.chbRaimon.setOnClickListener {hideKeyboard()}
+        binding.chbSanti.setOnClickListener {hideKeyboard()}
     }
 }

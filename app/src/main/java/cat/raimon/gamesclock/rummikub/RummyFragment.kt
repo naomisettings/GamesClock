@@ -4,10 +4,7 @@ import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -30,11 +27,17 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
+        //Keep screen on
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        //Pick up arguments
         args = RummyFragmentArgs.fromBundle(requireArguments())
 
+        //Initialize media
         mediaPlayerBip = MediaPlayer.create(requireActivity(), R.raw.notification)
         mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.end_tourn)
 
+        //Suffle Players List
         val listPlayers = args.players.toList().shuffled()
 
         displayPlayers(listPlayers)
@@ -76,7 +79,7 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer3.isEnabled = true
@@ -94,7 +97,7 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer1.isEnabled = true
@@ -117,7 +120,7 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer3.isEnabled = true
@@ -135,7 +138,7 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer4.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer4.isEnabled = true
@@ -154,7 +157,7 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer4.setOnClickListener {
             binding.apply {
-                txtPlayer4.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer4.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer1.isEnabled = true
@@ -177,7 +180,7 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer3.isEnabled = true
@@ -195,7 +198,7 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer4.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer4.isEnabled = true
@@ -214,7 +217,7 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer4.setOnClickListener {
             binding.apply {
-                txtPlayer4.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer4.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer2.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer2.isEnabled = true
@@ -232,7 +235,7 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer2.setOnClickListener {
             binding.apply {
-                txtPlayer2.setBackgroundColor(Color.rgb(0, 74, 124))
+                txtPlayer2.setBackgroundColor(Color.rgb(52, 72, 97))
                 txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
 
                 bttnPlayer1.isEnabled = true
