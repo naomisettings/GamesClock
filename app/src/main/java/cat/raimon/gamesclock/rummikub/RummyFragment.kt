@@ -79,8 +79,8 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer3.isEnabled = true
 
@@ -97,8 +97,8 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer1.isEnabled = true
 
@@ -120,8 +120,8 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer3.isEnabled = true
 
@@ -138,8 +138,8 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer4.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer4.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer4.isEnabled = true
 
@@ -157,8 +157,8 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer4.setOnClickListener {
             binding.apply {
-                txtPlayer4.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer4.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer1.isEnabled = true
 
@@ -180,8 +180,8 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer1.setOnClickListener {
             binding.apply {
-                txtPlayer1.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer3.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer3.isEnabled = true
 
@@ -198,8 +198,8 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer3.setOnClickListener {
             binding.apply {
-                txtPlayer3.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer4.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer3.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer4.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer4.isEnabled = true
 
@@ -217,8 +217,8 @@ class RummyFragment : Fragment() {
 
         binding.bttnPlayer4.setOnClickListener {
             binding.apply {
-                txtPlayer4.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer2.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer4.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer2.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer2.isEnabled = true
 
@@ -235,8 +235,8 @@ class RummyFragment : Fragment() {
         }
         binding.bttnPlayer2.setOnClickListener {
             binding.apply {
-                txtPlayer2.setBackgroundColor(Color.rgb(52, 72, 97))
-                txtPlayer1.setBackgroundColor(Color.rgb(245, 92, 71))
+                txtPlayer2.setBackgroundResource(R.drawable.players_shape)
+                txtPlayer1.setBackgroundResource(R.drawable.players_shape_red)
 
                 bttnPlayer1.isEnabled = true
 
