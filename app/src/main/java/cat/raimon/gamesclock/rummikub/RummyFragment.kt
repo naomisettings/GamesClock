@@ -42,7 +42,7 @@ class RummyFragment : Fragment() {
 
         displayPlayers(listPlayers)
         disconectUnusedButtons(listPlayers)
-
+        viewClock(args.time * 1000)
         timerFun(listPlayers)
 
         binding.bttnBack.setOnClickListener {

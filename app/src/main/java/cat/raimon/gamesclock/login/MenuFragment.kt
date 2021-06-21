@@ -123,13 +123,13 @@ class MenuFragment : Fragment() {
                 countCheckBoxes++
                 listPlayers.add(getString(R.string.pere))
             }
-            if (chbInvitat1.isChecked) {
+            if (chbAviaRM.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(getString(R.string.invitat_1))
+                listPlayers.add(getString(R.string.grandma))
             }
-            if (chbInvitat2.isChecked) {
+            if (chbGuest1.isChecked) {
                 countCheckBoxes++
-                listPlayers.add(getString(R.string.invitat_2))
+                listPlayers.add(getString(R.string.guest_1))
             }
         }
 
@@ -156,8 +156,8 @@ class MenuFragment : Fragment() {
         binding.chbCrisB.setOnClickListener {hideKeyboard()}
         binding.chbCrisS.setOnClickListener {hideKeyboard()}
         binding.chbPere.setOnClickListener {hideKeyboard()}
-        binding.chbInvitat1.setOnClickListener {hideKeyboard()}
-        binding.chbInvitat2.setOnClickListener {hideKeyboard()}
+        binding.chbAviaRM.setOnClickListener {hideKeyboard()}
+        binding.chbGuest1.setOnClickListener {hideKeyboard()}
         binding.chbMare.setOnClickListener {hideKeyboard()}
         binding.chbPare.setOnClickListener {hideKeyboard()}
         binding.chbRaimon.setOnClickListener {hideKeyboard()}
