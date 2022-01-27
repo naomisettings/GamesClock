@@ -18,156 +18,148 @@
                 android:layout_width="224dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="52dp"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/logorummy"
                 android:src="@drawable/logorummy"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.593"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titoLogin" />
-
-            <ImageButton
-                android:id="@+id/imgBttnScrabble"
-                android:layout_width="222dp"
-                android:layout_height="62dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/logoscrabble"
-                android:src="@drawable/logoscrabble"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgBttnRummy" />
 
             <TextView
                 android:id="@+id/titoLogin"
                 style="@style/titles"
-                android:layout_marginTop="30dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/please_chose_game"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.gridlayout.widget.GridLayout
-                android:id="@+id/gridLayout2"
-                android:layout_width="346dp"
-                android:layout_height="154dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="50dp"
-                app:layout_constraintEnd_toEndOf="parent"
+            <TextView
+                android:id="@+id/txtIntroduceTime"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="68dp"
+                android:text="@string/time"
+                android:textColor="#E8F1F5"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
+                app:layout_constraintTop_toBottomOf="@+id/imgBttnRummy" />
 
-                <CheckBox
-                    android:id="@+id/chbRaimon"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/raimon_ch"
-                    app:layout_column="0"
-                    app:layout_row="1" />
+            <TextView
+                android:id="@+id/ply1"
+                style="@style/textPlayers"
 
-                <CheckBox
-                    android:id="@+id/chbSanti"
-                    style="@style/chkboxes"
-                    android:text="@string/santi_ch"
-                    app:layout_column="0"
-                    app:layout_row="0" />
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="68dp"
+                android:text="@string/ply1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIntroduceTime"
+                tools:ignore="TextContrastCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbCrisB"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cris_b_ch"
-                    app:layout_column="1"
-                    app:layout_row="0" />
+            <TextView
+                android:id="@+id/ply2"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply1"
+                tools:ignore="TextContrastCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbPare"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pare_ch"
-                    app:layout_column="1"
-                    app:layout_row="1" />
+            <TextView
+                android:id="@+id/ply3"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply2"
+                tools:ignore="TextContrastCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbMare"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mare_ch"
-                    app:layout_column="2"
-                    app:layout_row="0" />
+            <TextView
+                android:id="@+id/ply4"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply3"
+                tools:ignore="TextContrastCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbCrisS"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cris_s_ch"
-                    app:layout_column="2"
-                    app:layout_row="1" />
+            <EditText
+                android:id="@+id/edply1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply1"
+                app:layout_constraintStart_toEndOf="@+id/ply1"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbPere"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pere_ch"
-                    app:layout_column="0"
-                    app:layout_row="2" />
+            <EditText
+                android:id="@+id/edply2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:textColor="#26C6DA"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply2"
+                app:layout_constraintStart_toEndOf="@+id/ply2"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbAviaRM"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/grandma_ch"
-                    app:layout_column="1"
-                    app:layout_row="2" />
+            <EditText
+                android:id="@+id/edply3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#26C6DA"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply3"
+                app:layout_constraintStart_toEndOf="@+id/ply3"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-                <CheckBox
-                    android:id="@+id/chbGuest1"
-                    style="@style/chkboxes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/guest_1_ch"
-                    app:layout_column="2"
-                    app:layout_row="2" />
-
-            </androidx.gridlayout.widget.GridLayout>
+            <EditText
+                android:id="@+id/edply4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#26C6DA"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply4"
+                app:layout_constraintStart_toEndOf="@+id/ply4"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/editTextNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
                 android:ems="10"
                 android:inputType="number"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txtIntroduceTime"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                android:textColor="#E8F1F5"
                 app:layout_constraintStart_toEndOf="@+id/txtIntroduceTime"
-                android:autofillHints=""
-                tools:ignore="LabelFor" />
-
-            <TextView
-                android:id="@+id/txtIntroduceTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="@string/time"
-                android:textColor="#E8F1F5"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgBttnScrabble" />
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

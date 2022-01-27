@@ -28,7 +28,7 @@
     </style>
 
     <style name="textPlayers">
-        <item name="android:textColor">#FAFAFA</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/players_shape</item>
     </style>

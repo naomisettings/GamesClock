@@ -38,11 +38,11 @@ class RummyFragment : Fragment() {
         mediaPlayer = MediaPlayer.create(requireActivity(), R.raw.end_tourn)
 
         //Suffle Players List
-        val listPlayers = args.players.toList().shuffled()
+        val listPlayers = args.players.toList()
 
         displayPlayers(listPlayers)
         disconectUnusedButtons(listPlayers)
-        viewClock(args.time * 1000)
+        viewClock(args.time.toLong() * 1000)
         timerFun(listPlayers)
 
         binding.bttnBack.setOnClickListener {
@@ -50,11 +50,12 @@ class RummyFragment : Fragment() {
             mediaPlayer.stop()
             mediaPlayerBip.stop()
         }
+
         binding.bttnEndGame.setOnClickListener {
-
+            findNavController().navigate(R.id.action_rummyFragment_to_menuFragment)
+            mediaPlayer.stop()
+            mediaPlayerBip.stop()
         }
-
-
 
         return binding.root
     }
@@ -256,7 +257,7 @@ class RummyFragment : Fragment() {
     }
 
     private fun timerFun(listPlayers: List<String>) {
-        val timer = object : CountDownTimer(args.time * 1000, 1000) {
+        val timer = object : CountDownTimer(args.time.toLong() * 1000, 1000) {
 
 
             override fun onTick(millisUntilFinished: Long) {
@@ -289,7 +290,7 @@ class RummyFragment : Fragment() {
             displayPlayers(listPlayers)
             disconectUnusedButtons(listPlayers)
 
-            viewClock(args.time * 1000)
+            viewClock(args.time.toLong() * 1000)
 
             binding.apply {
                 txtPlayer1.setBackgroundResource(R.drawable.players_shape)
@@ -344,9 +345,9 @@ class RummyFragment : Fragment() {
                 txtPlayer4.rotation = 180F
             }
             if (listPlayers.size == 4) {
-                txtPlayer2.text = listPlayers[2]
+                txtPlayer2.text = listPlayers[3]
                 txtPlayer2.rotation = 180F
-                txtPlayer4.text = listPlayers[3]
+                txtPlayer4.text = listPlayers[2]
             }
         }
     }

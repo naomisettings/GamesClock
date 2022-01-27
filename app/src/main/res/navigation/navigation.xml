@@ -3,22 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/login">
-    <fragment
-        android:id="@+id/login"
-        android:name="cat.raimon.gamesclock.login.Login"
-        tools:layout="@layout/fragment_login">
-        <argument
-            android:name="time"
-            app:argType="long" />
-        <argument
-            android:name="players"
-            app:argType="string[]" />
-        <action
-            android:id="@+id/action_login_to_menuFragment"
-            app:destination="@id/menuFragment"
-            app:popUpTo="@id/menuFragment" />
-    </fragment>
+    app:startDestination="@id/menuFragment">
     <fragment
         android:id="@+id/rummyFragment"
         android:name="cat.raimon.gamesclock.rummikub.RummyFragment"
@@ -26,7 +11,7 @@
         tools:layout="@layout/fragment_rummy">
         <argument
             android:name="time"
-            app:argType="long" />
+            app:argType="integer" />
         <argument
             android:name="players"
             app:argType="string[]" />

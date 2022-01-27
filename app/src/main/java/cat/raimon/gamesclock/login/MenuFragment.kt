@@ -24,9 +24,13 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_menu, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false)
+
 
         binding.imgBttnRummy.setOnClickListener {
+
+            editGet()
+
             openRummykub()
         }
 
@@ -36,21 +40,45 @@ class MenuFragment : Fragment() {
     }
 
 
+    private fun editGet() {
+        val player1 = binding.edply1.text.toString()
+        val player2 = binding.edply2.text.toString()
+        val player3 = binding.edply3.text.toString()
+        val player4 = binding.edply4.text.toString()
+
+        if (player1.isNotBlank() || player1.isNotEmpty()) {
+            listPlayers.add(player1)
+        }
+        if (player2.isNotBlank() || player2.isNotEmpty()) {
+            listPlayers.add(player2)
+        }
+        if (player3.isNotBlank() || player3.isNotEmpty()) {
+            listPlayers.add(player3)
+        }
+        if (player4.isNotBlank() || player4.isNotEmpty()) {
+            listPlayers.add(player4)
+        }
+
+    }
+
     /**
      * Check if players ara in range 2 to 4
      * If user don't select the correct number, the listPlayers will be clear and function recalled
      */
     private fun openRummykub() {
-        val countCheckBoxes = selectedCheckBoxes()
-        val edTextNumber = binding.editTextNumber.text
 
-        if (edTextNumber.isNotEmpty()) {
-            if (edTextNumber.toString().toInt() >= 60) {
-                val time = edTextNumber.toString().toLong()
+        var time = 0
+        if (binding.editTextNumber.text.isNotEmpty()) {
+            if (binding.editTextNumber.text.toString().toInt() >= 60) {
 
-                if (countCheckBoxes in 2..4) {
+                time = binding.editTextNumber.text.toString().toInt()
+
+                if (listPlayers.size >= 2) {
                     findNavController().navigate(
-                        MenuFragmentDirections.actionMenuFragmentToRummyFragment(time, listPlayers.toTypedArray())
+                        MenuFragmentDirections.actionMenuFragmentToRummyFragment(
+                            time,
+                            listPlayers.toTypedArray()
+                        )
                     )
                     hideKeyboard()
                 } else {
@@ -86,81 +114,26 @@ class MenuFragment : Fragment() {
             }
 
         }
+
     }
 
-    /**
-     * Add checkboxes ckehed in a listPlayers
-     */
-    private fun selectedCheckBoxes(): Int {
-        var countCheckBoxes = 0
+}
 
-        binding.apply {
-            if (chbCrisB.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.cris_b))
-            }
-            if (chbCrisS.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.cris_s))
-            }
-            if (chbMare.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.mare))
-            }
-            if (chbPare.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.pare))
-            }
-            if (chbRaimon.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.raimon))
-            }
-            if (chbSanti.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.santi))
-            }
-            if (chbPere.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.pere))
-            }
-            if (chbAviaRM.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.grandma))
-            }
-            if (chbGuest1.isChecked) {
-                countCheckBoxes++
-                listPlayers.add(getString(R.string.guest_1))
-            }
-        }
+/**
+ * Hide KKeyboard
+ */
+private fun Context.hideKeyboard(view: View) {
+    val inputMethodManager =
+        getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+}
 
-        return countCheckBoxes
-    }
+private fun Fragment.hideKeyboard() {
+    view?.let { activity?.hideKeyboard(it) }
+}
 
-    /**
-     * Hide KKeyboard
-     */
-    private fun Context.hideKeyboard(view: View) {
-        val inputMethodManager =
-            getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
-    }
-
-    private fun Fragment.hideKeyboard() {
-        view?.let { activity?.hideKeyboard(it) }
-    }
-
-    /**
-     * Hide Keyboard on click checkboxes
-     */
-    private fun hideKeyboardCheckBoxes(){
-        binding.chbCrisB.setOnClickListener {hideKeyboard()}
-        binding.chbCrisS.setOnClickListener {hideKeyboard()}
-        binding.chbPere.setOnClickListener {hideKeyboard()}
-        binding.chbAviaRM.setOnClickListener {hideKeyboard()}
-        binding.chbGuest1.setOnClickListener {hideKeyboard()}
-        binding.chbMare.setOnClickListener {hideKeyboard()}
-        binding.chbPare.setOnClickListener {hideKeyboard()}
-        binding.chbRaimon.setOnClickListener {hideKeyboard()}
-        binding.chbSanti.setOnClickListener {hideKeyboard()}
-    }
+/**
+ * Hide Keyboard on click checkboxes
+ */
+private fun hideKeyboardCheckBoxes() {
 }

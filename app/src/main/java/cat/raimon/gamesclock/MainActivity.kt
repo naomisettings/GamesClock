@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.myNavHostFragment)
 
-        //NavigationUI.setupActionBarWithNavController(this,navController)
+        NavigationUI.setupActionBarWithNavController(this,navController)
 
     }
 /*
