@@ -30,12 +30,14 @@
             <TextView
                 android:id="@+id/titoLogin"
                 style="@style/titles"
-                android:layout_marginStart="50dp"
+                android:layout_width="315dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/please_chose_game"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,6 +115,8 @@
             <EditText
                 android:id="@+id/edply1"
                 style="@style/edtplyr"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -122,7 +126,8 @@
             <EditText
                 android:id="@+id/edply2"
                 style="@style/edtplyr"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -132,6 +137,8 @@
             <EditText
                 android:id="@+id/edply3"
                 style="@style/edtplyr"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -141,7 +148,7 @@
             <EditText
                 android:id="@+id/edply4"
                 style="@style/edtplyr"
-                android:layout_width="206dp"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply4"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -151,8 +158,8 @@
 
             <EditText
                 android:id="@+id/editTextNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="44dp"
                 android:ems="10"
                 android:inputType="number"
