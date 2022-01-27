@@ -18,12 +18,12 @@
                 android:layout_width="224dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="44dp"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/logorummy"
                 android:src="@drawable/logorummy"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.593"
+                app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titoLogin" />
 
@@ -31,10 +31,11 @@
                 android:id="@+id/titoLogin"
                 style="@style/titles"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="36dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/please_chose_game"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="36dp"
                 android:text="@string/time"
                 android:textColor="#E8F1F5"
                 android:textSize="24sp"
@@ -58,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="48dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/ply1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtIntroduceTime"
@@ -102,53 +103,32 @@
 
             <EditText
                 android:id="@+id/edply1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:inputType="textPersonName"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply1"
                 app:layout_constraintStart_toEndOf="@+id/ply1"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                style="@style/edtplyr" />
 
             <EditText
                 android:id="@+id/edply2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:textColor="#26C6DA"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply2"
                 app:layout_constraintStart_toEndOf="@+id/ply2"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                style="@style/edtplyr"/>
 
             <EditText
                 android:id="@+id/edply3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textColor="#26C6DA"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply3"
                 app:layout_constraintStart_toEndOf="@+id/ply3"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                style="@style/edtplyr"/>
 
             <EditText
                 android:id="@+id/edply4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textColor="#26C6DA"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply4"
                 app:layout_constraintStart_toEndOf="@+id/ply4"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                style="@style/edtplyr"/>
 
             <EditText
                 android:id="@+id/editTextNumber"

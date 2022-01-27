@@ -34,8 +34,6 @@ class MenuFragment : Fragment() {
             openRummykub()
         }
 
-        hideKeyboardCheckBoxes()
-
         return binding.root
     }
 
@@ -57,6 +55,7 @@ class MenuFragment : Fragment() {
         }
         if (player4.isNotBlank() || player4.isNotEmpty()) {
             listPlayers.add(player4)
+            hideKeyboard()
         }
 
     }
@@ -83,6 +82,7 @@ class MenuFragment : Fragment() {
                     hideKeyboard()
                 } else {
                     listPlayers.clear()
+                    hideKeyboard()
                     view?.let {
                         Snackbar.make(
                             it,
@@ -93,7 +93,8 @@ class MenuFragment : Fragment() {
                 }
             } else {
                 listPlayers.clear()
-
+                hideKeyboard()
+                binding.editTextNumber.setText("")
                 view?.let {
                     Snackbar.make(
                         it,
@@ -112,11 +113,8 @@ class MenuFragment : Fragment() {
                     Snackbar.LENGTH_LONG
                 ).show()
             }
-
         }
-
     }
-
 }
 
 /**
@@ -130,10 +128,4 @@ private fun Context.hideKeyboard(view: View) {
 
 private fun Fragment.hideKeyboard() {
     view?.let { activity?.hideKeyboard(it) }
-}
-
-/**
- * Hide Keyboard on click checkboxes
- */
-private fun hideKeyboardCheckBoxes() {
 }

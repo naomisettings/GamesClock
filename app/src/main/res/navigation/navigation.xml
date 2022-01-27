@@ -7,7 +7,6 @@
     <fragment
         android:id="@+id/rummyFragment"
         android:name="cat.raimon.gamesclock.rummikub.RummyFragment"
-        android:label="RummyFragment"
         tools:layout="@layout/fragment_rummy">
         <argument
             android:name="time"
@@ -23,7 +22,6 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="cat.raimon.gamesclock.login.MenuFragment"
-        android:label="MenuFragment"
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_rummyFragment"
