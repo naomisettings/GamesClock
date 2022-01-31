@@ -29,6 +29,8 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
+        (requireActivity() as MainActivity).supportActionBar!!.hide()
+
         //Keep screen on
         requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
@@ -360,7 +362,7 @@ class RummyFragment : Fragment() {
 
     /**
      * Disable Back Button
-     */
+
 
     override fun onResume() {
         super.onResume()
@@ -370,5 +372,6 @@ class RummyFragment : Fragment() {
             keyCode == KeyEvent.KEYCODE_BACK
         }
     }
+     */
 }
 

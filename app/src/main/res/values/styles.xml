@@ -7,7 +7,7 @@
         <item name="android:layout_marginTop">100dp</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textColor">#FAFAFA</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">21sp</item>
     </style>
 
     <style name="chkboxes">
@@ -35,7 +35,7 @@
 
     <style name="textTime">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:background">@drawable/players_shape</item>
     </style>
