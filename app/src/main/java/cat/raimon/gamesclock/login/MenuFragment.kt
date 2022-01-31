@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import cat.raimon.gamesclock.MainActivity
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentMenuBinding
 import com.google.android.material.snackbar.Snackbar
@@ -26,6 +27,7 @@ class MenuFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false)
 
+        (requireActivity() as MainActivity).supportActionBar!!.show()
 
         binding.imgBttnRummy.setOnClickListener {
 
