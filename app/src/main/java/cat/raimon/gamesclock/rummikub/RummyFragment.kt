@@ -1,5 +1,6 @@
 package cat.raimon.gamesclock.rummikub
 
+import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import cat.raimon.gamesclock.MainActivity
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentRummyBinding
 import java.util.concurrent.TimeUnit
@@ -56,6 +58,7 @@ class RummyFragment : Fragment() {
             mediaPlayer.stop()
             mediaPlayerBip.stop()
         }
+
 
         return binding.root
     }
@@ -358,6 +361,7 @@ class RummyFragment : Fragment() {
     /**
      * Disable Back Button
      */
+
     override fun onResume() {
         super.onResume()
         this.requireView().isFocusableInTouchMode = true
@@ -366,6 +370,5 @@ class RummyFragment : Fragment() {
             keyCode == KeyEvent.KEYCODE_BACK
         }
     }
-
 }
 

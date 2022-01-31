@@ -140,7 +140,8 @@
                 android:backgroundTint="#F55C47"
                 android:text="@string/end_game"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bttnBack"
@@ -152,7 +153,8 @@
                 android:backgroundTint="#F55C47"
                 android:text="@string/come_back"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/bttnRetry"

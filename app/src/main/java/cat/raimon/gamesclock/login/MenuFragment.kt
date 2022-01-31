@@ -45,16 +45,16 @@ class MenuFragment : Fragment() {
         val player4 = binding.edply4.text.toString()
 
         if (player1.isNotBlank() || player1.isNotEmpty()) {
-            listPlayers.add(player1)
+            listPlayers.add("  $player1")
         }
         if (player2.isNotBlank() || player2.isNotEmpty()) {
-            listPlayers.add(player2)
+            listPlayers.add("  $player2")
         }
         if (player3.isNotBlank() || player3.isNotEmpty()) {
-            listPlayers.add(player3)
+            listPlayers.add("  $player3")
         }
         if (player4.isNotBlank() || player4.isNotEmpty()) {
-            listPlayers.add(player4)
+            listPlayers.add("  $player4")
             hideKeyboard()
         }
 

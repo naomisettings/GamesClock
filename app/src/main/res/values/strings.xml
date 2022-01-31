@@ -19,10 +19,10 @@
     <string name="scrabble_stadistis">SCRABBLE STADISTIS</string>
     <string name="come_back">COME BACK</string>
     <string name="retry">Retry</string>
-    <string name="ply1">PLAYER 1:</string>
-    <string name="ply2">PLAYER 2:</string>
-    <string name="ply3">PLAYER 3:</string>
-    <string name="ply4">PLAYER 4:</string>
+    <string name="ply1">PLAYER 1</string>
+    <string name="ply2">PLAYER 2</string>
+    <string name="ply3">PLAYER 3</string>
+    <string name="ply4">PLAYER 4</string>
     <string name="_60"><![CDATA[>= 60]]></string>
     <string name="name">Name</string>
 </resources>

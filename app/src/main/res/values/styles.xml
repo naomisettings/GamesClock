@@ -23,13 +23,23 @@
     <style name="time">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#FAFAFA</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#4BFFFFFF</item>
     </style>
 
     <style name="textPlayers">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/players_shape</item>
+    </style>
+
+    <style name="textTime">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:background">@drawable/players_shape</item>
     </style>
 
@@ -39,7 +49,17 @@
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:ems">10</item>
         <item name="android:inputType">textPersonName</item>
-        <item name="android:textColor">#FAFAFA</item>
         <item name="android:textColorHint">#4BFFFFFF</item>
     </style>
+
+    <style name="edtTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#4BFFFFFF</item>
+    </style>
+
 </resources>

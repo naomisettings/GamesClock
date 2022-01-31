@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -44,13 +44,12 @@
 
             <TextView
                 android:id="@+id/txtIntroduceTime"
-                style="@style/textPlayers"
+                style="@style/textTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="36dp"
                 android:text="@string/time"
-                android:textColor="#E8F1F5"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -60,12 +59,12 @@
             <TextView
                 android:id="@+id/ply1"
                 style="@style/textPlayers"
-
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="36dp"
                 android:text="@string/ply1"
+                android:textColor="#fcc828"
                 app:layout_constraintEnd_toStartOf="@+id/edply1"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +79,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/ply2"
+                android:textColor="#040101"
                 app:layout_constraintEnd_toStartOf="@+id/edply2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -94,6 +94,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/ply3"
+                android:textColor="#c71f1e"
                 app:layout_constraintEnd_toStartOf="@+id/edply3"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -108,6 +109,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/ply4"
+                android:textColor="#0ba5e8"
                 app:layout_constraintEnd_toStartOf="@+id/edply4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ply3"
@@ -168,7 +170,7 @@
 
             <EditText
                 android:id="@+id/editTextNumber"
-                style="@style/edtplyr"
+                style="@style/edtTime"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="44dp"
