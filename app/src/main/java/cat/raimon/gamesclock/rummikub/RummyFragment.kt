@@ -285,6 +285,9 @@ class RummyFragment : Fragment() {
             mediaPlayer.stop()
             mediaPlayerBip.stop()
 
+            mediaPlayer.prepare()
+            mediaPlayerBip.prepare()
+
             timer.cancel()
 
             displayPlayers(listPlayers)

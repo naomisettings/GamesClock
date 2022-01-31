@@ -116,18 +116,23 @@
                 android:id="@+id/edply1"
                 style="@style/edtplyr"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="Name"
+                android:textColorHint="#4BFFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/ply1"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
             <EditText
                 android:id="@+id/edply2"
                 style="@style/edtplyr"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="Name"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -138,7 +143,9 @@
                 android:id="@+id/edply3"
                 style="@style/edtplyr"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="Name"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -149,7 +156,9 @@
                 android:id="@+id/edply4"
                 style="@style/edtplyr"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
+                android:autofillHints=""
+                android:hint="Name"
                 app:layout_constraintBaseline_toBaselineOf="@+id/ply4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -158,16 +167,19 @@
 
             <EditText
                 android:id="@+id/editTextNumber"
+                style="@style/edtplyr"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="44dp"
+                android:autofillHints=""
                 android:ems="10"
+                android:hint=">= 60"
                 android:inputType="number"
                 app:layout_constraintBaseline_toBaselineOf="@+id/txtIntroduceTime"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/txtIntroduceTime"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
