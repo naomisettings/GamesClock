@@ -35,7 +35,7 @@
 
     <style name="textPlayersRummy">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">25dp</item>
+        <item name="android:textSize">24dp</item>
         <item name="android:background">@drawable/players_shape</item>
 
     </style>
