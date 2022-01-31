@@ -27,8 +27,6 @@ class MenuFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false)
 
-        (requireActivity() as MainActivity).supportActionBar!!.show()
-
         binding.imgBttnRummy.setOnClickListener {
 
             editGet()

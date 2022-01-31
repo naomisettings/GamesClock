@@ -29,7 +29,7 @@ class RummyFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_rummy, container, false)
 
-        (requireActivity() as MainActivity).supportActionBar!!.hide()
+        arrayOf((requireActivity() as MainActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(false))
 
         //Keep screen on
         requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
