@@ -24,7 +24,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#FAFAFA</item>
-        <item name="android:textSize">34sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="textPlayers">
@@ -36,7 +36,7 @@
     <style name="edtplyr">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginStart">20dp</item>
         <item name="android:ems">10</item>
         <item name="android:inputType">textPersonName</item>
         <item name="android:textColor">#FAFAFA</item>

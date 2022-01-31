@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Games Clock</string>
-    <string name="please_chose_game">PLEASE, SET PLAYERS AND ENJOY…</string>
+    <string name="please_chose_game">PRESS BUTTON TO START AND ENJOY…</string>
     <string name="logoscrabble">logoscrabble</string>
     <string name="logorummy">logorummy</string>
     <string name="players_spinner">Players</string>
@@ -23,4 +23,6 @@
     <string name="ply2">PLAYER 2:</string>
     <string name="ply3">PLAYER 3:</string>
     <string name="ply4">PLAYER 4:</string>
+    <string name="_60"><![CDATA[>= 60]]></string>
+    <string name="name">Name</string>
 </resources>
