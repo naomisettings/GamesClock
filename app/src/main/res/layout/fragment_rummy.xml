@@ -139,6 +139,7 @@
                 android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/end_game"
+                android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -152,6 +153,7 @@
                 android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/come_back"
+                android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />

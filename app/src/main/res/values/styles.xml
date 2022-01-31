@@ -24,7 +24,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#FAFAFA</item>
-        <item name="android:textSize">34dp</item>
+        <item name="android:textSize">34sp</item>
     </style>
 
     <style name="textPlayers">
@@ -36,7 +36,7 @@
 
     <style name="textTime">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">21dp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:background">@drawable/players_shape</item>
     </style>
