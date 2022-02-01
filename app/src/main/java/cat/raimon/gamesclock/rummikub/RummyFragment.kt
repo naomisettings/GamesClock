@@ -360,6 +360,10 @@ class RummyFragment : Fragment() {
         }
     }
 
+    interface IOnBackPressed {
+        fun onBackPressed(): Boolean
+    }
+
     /**
      * Disable Back Button
 

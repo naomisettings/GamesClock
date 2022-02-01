@@ -3,14 +3,14 @@ package cat.raimon.gamesclock.login
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import cat.raimon.gamesclock.MainActivity
 import cat.raimon.gamesclock.R
 import cat.raimon.gamesclock.databinding.FragmentMenuBinding
 import com.google.android.material.snackbar.Snackbar
@@ -27,22 +27,27 @@ class MenuFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false)
 
+
         binding.imgBttnRummy.setOnClickListener {
 
-            editGet()
+            if (editGet()) {
 
-            openRummykub()
+                openRummykub()
+            }
         }
 
         return binding.root
     }
 
+    private fun editGet(): Boolean {
 
-    private fun editGet() {
+        var correcte = true
+
         val player1 = binding.edply1.text.toString()
         val player2 = binding.edply2.text.toString()
         val player3 = binding.edply3.text.toString()
         val player4 = binding.edply4.text.toString()
+
 
         if (player1.isNotBlank() || player1.isNotEmpty()) {
             listPlayers.add("  $player1")
@@ -57,7 +62,30 @@ class MenuFragment : Fragment() {
             listPlayers.add("  $player4")
             hideKeyboard()
         }
+        val setToReturn = HashSet<String>()
 
+        for (p in listPlayers) {
+                setToReturn.add(p)
+        }
+
+        if (listPlayers.size != setToReturn.size) {
+
+            correcte = false
+
+            listPlayers.clear()
+
+            hideKeyboard()
+
+            view?.let {
+                Snackbar.make(
+                    it,
+                    R.string.nom_repetit,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }
+
+        return correcte
     }
 
     /**

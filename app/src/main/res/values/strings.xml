@@ -25,4 +25,5 @@
     <string name="ply4">PLAYER 4</string>
     <string name="_60"><![CDATA[>= 60]]></string>
     <string name="name">Name</string>
+    <string name="nom_repetit">There can be no repeated names</string>
 </resources>
