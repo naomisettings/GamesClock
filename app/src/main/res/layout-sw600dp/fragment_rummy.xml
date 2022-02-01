@@ -28,6 +28,66 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <TextView
+                    android:id="@+id/txtPlayer1"
+                    style="@style/textPlayers"
+                    android:layout_width="339dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="34sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/txtPlayer2"
+                    style="@style/textPlayers"
+                    android:layout_width="339dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="34sp"
+                    app:layout_column="1"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/txtPlayer3"
+                    style="@style/textPlayers"
+                    android:layout_width="339dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="34sp"
+                    app:layout_column="0"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:id="@+id/txtPlayer4"
+                    style="@style/textPlayers"
+                    android:layout_width="339dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="34sp"
+                    app:layout_column="1"
+                    app:layout_row="3" />
+
+                <ImageButton
+                    android:id="@+id/bttnPlayer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/button_player_1"
+                    android:rotation="180"
+                    app:layout_column="0"
+                    app:layout_row="1"
+                    app:srcCompat="@drawable/comodingroctablet" />
+
+                <ImageButton
+                    android:id="@+id/bttnPlayer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/button_player_2"
+                    android:rotation="180"
+                    app:layout_column="1"
+                    app:layout_row="1"
+                    app:srcCompat="@drawable/comodinblautablet" />
+
                 <ImageButton
                     android:id="@+id/bttnPlayer3"
                     android:layout_width="wrap_content"
@@ -35,7 +95,7 @@
                     android:contentDescription="@string/button_player_3"
                     app:layout_column="0"
                     app:layout_row="2"
-                    app:srcCompat="@drawable/comodinnegre" />
+                    app:srcCompat="@drawable/comodinnegretablet" />
 
                 <ImageButton
                     android:id="@+id/bttnPlayer4"
@@ -44,61 +104,7 @@
                     android:contentDescription="@string/button_player_4"
                     app:layout_column="1"
                     app:layout_row="2"
-                    app:srcCompat="@drawable/comodinvermell" />
-
-                <ImageButton
-                    android:id="@+id/bttnPlayer1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/button_player_1"
-                    app:layout_column="0"
-                    app:layout_row="1"
-                    app:srcCompat="@drawable/comodingroc" />
-
-                <ImageButton
-                    android:id="@+id/bttnPlayer2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/button_player_2"
-                    app:layout_column="1"
-                    app:layout_row="1"
-                    app:srcCompat="@drawable/comodinblau" />
-
-                <TextView
-                    android:id="@+id/txtPlayer1"
-                    style="@style/textPlayersRummy"
-                    android:layout_width="133dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="5dp"
-                    app:layout_column="0"
-                    app:layout_row="0" />
-
-                <TextView
-                    android:id="@+id/txtPlayer2"
-                    style="@style/textPlayersRummy"
-                    android:layout_width="134dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="5dp"
-                    app:layout_column="1"
-                    app:layout_row="0" />
-
-                <TextView
-                    android:id="@+id/txtPlayer3"
-                    style="@style/textPlayersRummy"
-                    android:layout_width="137dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="5dp"
-                    app:layout_column="0"
-                    app:layout_row="3" />
-
-                <TextView
-                    android:id="@+id/txtPlayer4"
-                    style="@style/textPlayersRummy"
-                    android:layout_width="134dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="5dp"
-                    app:layout_column="1"
-                    app:layout_row="3" />
+                    app:srcCompat="@drawable/comodinvermelltablet" />
 
             </androidx.gridlayout.widget.GridLayout>
 
@@ -111,6 +117,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:textSize="60sp"
                 app:layout_constraintBottom_toTopOf="@+id/gridLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +132,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:textSize="60sp"
                 app:layout_constraintBottom_toTopOf="@+id/bttnBack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +147,7 @@
                 android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/end_game"
-                android:textSize="18dp"
+                android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -153,24 +161,24 @@
                 android:background="@drawable/button_shape"
                 android:backgroundTint="#F55C47"
                 android:text="@string/come_back"
-                android:textSize="18dp"
+                android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/bttnRetry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="115dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/button_shape"
                 android:contentDescription="@string/retry"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/retry" />
+                app:srcCompat="@drawable/retrytablet" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

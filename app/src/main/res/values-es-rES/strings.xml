@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Games Clock</string>
+    <string name="please_chose_game">PULSE EL BOTÓN PARA COMENZAR I DISFRUTA...</string>
+    <string name="logorummy">logorummy</string>
+    <string name="button_player_3">Button Player 3</string>
+    <string name="button_player_1">Button Player 1</string>
+    <string name="button_player_2">Button Player 2</string>
+    <string name="button_player_4">Button Player 4</string>
+    <string name="time">TIEMPO</string>
+    <string name="checkboxe_snackbar">Seleccione entre 2 y 4 jugadores</string>
+    <string name="select_time">Por favor, introduzca el tiempo</string>
+    <string name="minim_time">"El tiempo mínimo es de 60 segundos "</string>
+    <string name="start">empezar</string>
+    <string name="end_game">fin del juego</string>
+    <string name="come_back">VOLVER</string>
+    <string name="retry">Retry</string>
+    <string name="ply1">JUGADOR 1</string>
+    <string name="ply2">JUGADOR 2</string>
+    <string name="ply3">JUGADOR 3</string>
+    <string name="ply4">JUGADOR 4</string>
+    <string name="_60"><![CDATA[>= 60]]></string>
+    <string name="name">Nombre</string>
+    <string name="nom_repetit">No puede haber nombres repetidos</string>
+</resources>
