@@ -166,17 +166,17 @@
 
             <ImageButton
                 android:id="@+id/bttnRetry"
-                android:layout_width="93dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="115dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/button_shape"
                 android:contentDescription="@string/retry"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/retry" />
+                app:srcCompat="@drawable/retrytablet" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
