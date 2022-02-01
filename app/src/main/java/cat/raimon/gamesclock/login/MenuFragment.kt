@@ -43,78 +43,46 @@ class MenuFragment : Fragment() {
 
         var correcte = true
 
-        val player1 = binding.edply1.text.toString()
-        val player2 = binding.edply2.text.toString()
-        val player3 = binding.edply3.text.toString()
-        val player4 = binding.edply4.text.toString()
-
-
-        if (player1.isNotBlank() || player1.isNotEmpty()) {
-            listPlayers.add("  $player1")
-        }
-        if (player2.isNotBlank() || player2.isNotEmpty()) {
-            listPlayers.add("  $player2")
-        }
-        if (player3.isNotBlank() || player3.isNotEmpty()) {
-            listPlayers.add("  $player3")
-        }
-        if (player4.isNotBlank() || player4.isNotEmpty()) {
-            listPlayers.add("  $player4")
-            hideKeyboard()
-        }
-        val setToReturn = HashSet<String>()
-
-        for (p in listPlayers) {
-                setToReturn.add(p)
-        }
-
-        if (listPlayers.size != setToReturn.size) {
-
-            correcte = false
-
-            listPlayers.clear()
-
-            hideKeyboard()
-
-            view?.let {
-                Snackbar.make(
-                    it,
-                    R.string.nom_repetit,
-                    Snackbar.LENGTH_LONG
-                ).show()
-            }
-        }
-
-        return correcte
-    }
-
-    /**
-     * Check if players ara in range 2 to 4
-     * If user don't select the correct number, the listPlayers will be clear and function recalled
-     */
-    private fun openRummykub() {
-
-        var time = 0
         if (binding.editTextNumber.text.isNotEmpty()) {
             if (binding.editTextNumber.text.toString().toInt() >= 60) {
 
-                time = binding.editTextNumber.text.toString().toInt()
+                val player1 = binding.edply1.text.toString()
+                val player2 = binding.edply2.text.toString()
+                val player3 = binding.edply3.text.toString()
+                val player4 = binding.edply4.text.toString()
 
-                if (listPlayers.size >= 2) {
-                    findNavController().navigate(
-                        MenuFragmentDirections.actionMenuFragmentToRummyFragment(
-                            time,
-                            listPlayers.toTypedArray()
-                        )
-                    )
+
+                if (player1.isNotBlank() || player1.isNotEmpty()) {
+                    listPlayers.add("  $player1")
+                }
+                if (player2.isNotBlank() || player2.isNotEmpty()) {
+                    listPlayers.add("  $player2")
+                }
+                if (player3.isNotBlank() || player3.isNotEmpty()) {
+                    listPlayers.add("  $player3")
+                }
+                if (player4.isNotBlank() || player4.isNotEmpty()) {
+                    listPlayers.add("  $player4")
                     hideKeyboard()
-                } else {
+                }
+                val setToReturn = HashSet<String>()
+
+                for (p in listPlayers) {
+                    setToReturn.add(p)
+                }
+
+                if (listPlayers.size != setToReturn.size) {
+
+                    correcte = false
+
                     listPlayers.clear()
+
                     hideKeyboard()
+
                     view?.let {
                         Snackbar.make(
                             it,
-                            R.string.checkboxe_snackbar,
+                            R.string.nom_repetit,
                             Snackbar.LENGTH_LONG
                         ).show()
                     }
@@ -130,14 +98,48 @@ class MenuFragment : Fragment() {
                         Snackbar.LENGTH_LONG
                     ).show()
                 }
+                correcte = false
             }
         } else {
             listPlayers.clear()
-
+            hideKeyboard()
             view?.let {
                 Snackbar.make(
                     it,
                     R.string.select_time,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+            correcte = false
+        }
+        return correcte
+    }
+
+    /**
+     * Check if players ara in range 2 to 4
+     * If user don't select the correct number, the listPlayers will be clear and function recalled
+     */
+    private fun openRummykub() {
+
+        var time = 0
+
+        time = binding.editTextNumber.text.toString().toInt()
+
+        if (listPlayers.size >= 2) {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToRummyFragment(
+                    time,
+                    listPlayers.toTypedArray()
+                )
+            )
+            hideKeyboard()
+        } else {
+            listPlayers.clear()
+            hideKeyboard()
+            view?.let {
+                Snackbar.make(
+                    it,
+                    R.string.checkboxe_snackbar,
                     Snackbar.LENGTH_LONG
                 ).show()
             }

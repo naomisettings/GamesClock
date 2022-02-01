@@ -1,22 +1,17 @@
 <resources>
     <string name="app_name">Games Clock</string>
     <string name="please_chose_game">PRESS THE BUTTON TO START AND ENJOY…</string>
-    <string name="logoscrabble">logoscrabble</string>
     <string name="logorummy">logorummy</string>
-    <string name="players_spinner">Players</string>
     <string name="button_player_3">Button Player 3</string>
     <string name="button_player_1">Button Player 1</string>
     <string name="button_player_2">Button Player 2</string>
     <string name="button_player_4">Button Player 4</string>
-    <string name="time">TIME:</string>
+    <string name="time">TIME</string>
     <string name="checkboxe_snackbar">Select between 2 and 4 players</string>
     <string name="select_time">Please, introduce the time</string>
     <string name="minim_time">The minim time is 60 seconds</string>
     <string name="start">start</string>
     <string name="end_game">end game</string>
-    <string name="select_game">SELECT GAME</string>
-    <string name="rummy_stadistics">RUMMY STADISTICS</string>
-    <string name="scrabble_stadistis">SCRABBLE STADISTIS</string>
     <string name="come_back">COME BACK</string>
     <string name="retry">Retry</string>
     <string name="ply1">PLAYER 1</string>
