@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".login.MenuFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgBttnRummy"
+                android:layout_width="570dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/botonshadow"
+                android:contentDescription="@string/logorummy"
+                android:src="@drawable/logorummytablet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titoLogin" />
+
+            <TextView
+                android:id="@+id/titoLogin"
+                style="@style/titles"
+                android:layout_width="824dp"
+                android:layout_height="182dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/please_chose_game"
+                android:textSize="50sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtIntroduceTime"
+                style="@style/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="88dp"
+                android:text="@string/time"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBttnRummy" />
+
+            <TextView
+                android:id="@+id/ply1"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/ply1"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toStartOf="@+id/edply1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIntroduceTime"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/ply2"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply2"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toStartOf="@+id/edply2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply1"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/ply3"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply3"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toStartOf="@+id/edply3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply2"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/ply4"
+                style="@style/textPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/ply4"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toStartOf="@+id/edply4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ply3"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/edply1"
+                style="@style/edtplyr"
+                android:layout_width="358dp"
+                android:layout_height="75dp"
+                android:autofillHints=""
+                android:hint="@string/name"
+                android:textColorHint="#4BFFFFFF"
+                android:textSize="38sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ply1"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+            <EditText
+                android:id="@+id/edply2"
+                style="@style/edtplyr"
+                android:layout_width="358dp"
+                android:layout_height="75dp"
+                android:autofillHints=""
+                android:hint="@string/name"
+                android:textSize="38sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ply2"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/edply3"
+                style="@style/edtplyr"
+                android:layout_width="358dp"
+                android:layout_height="75dp"
+                android:autofillHints=""
+                android:hint="@string/name"
+                android:textSize="38sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ply3"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/edply4"
+                style="@style/edtplyr"
+                android:layout_width="358dp"
+                android:layout_height="75dp"
+                android:autofillHints=""
+                android:hint="@string/name"
+                android:textSize="38sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ply4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ply4"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                style="@style/edtTime"
+                android:layout_width="358dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="44dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/_60"
+                android:inputType="number"
+                android:textSize="38sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txtIntroduceTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txtIntroduceTime"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>
